@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.background1{
+    background-image:url(assets/img/blob-small.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    /* margin-left:-70px; */
+}
+/* .background2{
+    background-image:url(assets/img/circle.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+   margin-left: 500px;
+} */
+
+
+html, body { height: 100%; }
+body { margin: 50px; font-family: Roboto, "Helvetica Neue", sans-serif; }

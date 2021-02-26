@@ -1,0 +1,75 @@
+<section class="container" >
+
+
+  <div class="banner">
+    <div class="text-banner">
+      <p class="banner-text">We make it Super Simple</p>
+    </div>
+
+
+    <div class="img-banner">
+      <img src="assets/img/collect_img-video.png"/>
+    </div>
+  </div>
+
+<div class="banner2">
+    <div class ="align">
+<div class="eligibility">
+    <p><br>Eligibility Calculator</p>
+</div>
+      <div>
+        <span><br>Monthly Income </span><b class="manthlyIncome"><br> &#8377; {{income.value}}</b>
+      </div>
+      <mat-slider class="slider" #income (change)="updateSetting($event)" step="10000" min="100000" max="300000" [value]="income.value">
+      </mat-slider>
+      <br>
+      <br>
+
+      <div>
+        <span>Monthly Expense </span><b class="manthlyExpense"><br> &#8377; {{expense.value}}</b>
+      </div>
+      <mat-slider class="slider" #expense (change)="updateSetting($event)" step="10000" min="10000" max="100000" [value]="expense.value">
+      </mat-slider>
+      <br>
+      <br>
+
+      <form>
+        <h4>Repayment Tenure</h4>
+        <mat-form-field>
+          <mat-select
+                      [(ngModel)] = "selectedValue" name = "month">
+            <mat-option *ngFor = "let month of months"
+                        [value] = "month.value">
+              {{month.display}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+
+      <label>Do you have any existing loans?    </label>
+    <mat-slide-toggle></mat-slide-toggle> <br><br>
+
+    <label for="emi">EMI for existing loans(optional) <br> <br>&#8377; </label>
+    <input type="text" id="emi" class="no-outline input"  name="emi" placeholder = "100000" value=""><br><br>
+</div>
+
+
+</div>
+<div class="banner3">
+  <div class ="loanamount">
+    <label >Loan Amount<br> <br>&#8377; </label>
+<!--    <span>Loan Amount </span><b class="amount"><br> &#8377; </b>-->
+<!--    <input type="text" id="loan" class="no-outline input" name="loan" placeholder = "0" value=""><br><br>-->
+  </div>
+<br>
+
+  <div class="emi">
+    <span>Your EMI Will be </span><b class="amount"><br> &#8377; </b>
+  </div>
+<br>
+  <div class="submit">
+    <button type="button" class="submit"><a href="#getmoney">GET MONEY</a></button>
+  </div>
+</div>
+</section>
+
